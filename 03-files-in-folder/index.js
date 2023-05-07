@@ -10,12 +10,11 @@ async function getFiles() {
     if (file.isFile()) {
       const filePath = path.join(secretFolderDir, file.name);
       const fileInfo = path.parse(filePath);
-      const fileStat = fs.stat(filePath, (err, stats) => {
+      fs.stat(filePath, (err, stats) => {
         console.log(fileInfo.name, ' - ', fileInfo.ext, ' - ', stats.size / 1024 + 'kb');
       });
     }
-  })
+  });
 }
 
 getFiles();
-

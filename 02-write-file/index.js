@@ -32,4 +32,4 @@ rl.on('line', (data) => {
 rl.on('SIGINT', () => {
   output.write('\nThank you!');
   process.exit();
-})
+});
