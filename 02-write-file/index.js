@@ -8,7 +8,6 @@ const {
   stdout: output
 } = require('process');
 
-
 const filePath = path.join(__dirname, 'output.txt');
 
 let outputStream = fs.createWriteStream(filePath, 'utf-8');
